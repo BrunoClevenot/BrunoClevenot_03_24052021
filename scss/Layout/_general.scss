@@ -1,3 +1,4 @@
+/* Général*/
 body{
 
     font-family: Roboto, Shrikhand, sans;
@@ -9,36 +10,7 @@ a{
     display: block;
 }
 .shrikhand{
-    font-family: Shrikhand;
-}
-.header{
-    background-color: $color-fond-gris;
-    display : flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    &__text{
-        padding-left: 1rem;
-    }
-}
-.image-header{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 3px 4px $color-gris;
-    margin-top:1rem;
-    margin-bottom: 3px;
-    &--logo{
-        flex-grow:1;
-        text-align: center;
-    }
-    &__marque{
-        padding-left: 1rem;
-    }
-    &--hidden{
-        display: none;
-    }    
+    font-family: Shrikhand, Roboto, sans;
 }
 /* Le footer*/
 footer{
@@ -66,6 +38,40 @@ footer{
         
         padding-bottom: 2.1rem;
     }
+}
+/*************** Page d'accueil***************/
+.header{
+    background-color: $color-fond-gris;
+    display : flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    &__text{
+        padding-left: 1rem;
+    }
+}
+.image-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 3px 4px $color-gris;
+    margin-top:1rem;
+    margin-bottom: 3px;
+    &--logo{
+        flex-grow:1;
+        text-align: center;
+    }
+    &__marque{
+        padding-left: 1rem;
+    }
+    &--dell{
+        box-shadow: none;
+    }
+
+    &--hidden{
+        display: none;
+    }    
 }
 .loader
 {
@@ -143,7 +149,7 @@ footer{
     margin-left: 10vw;
     margin-top: 3vw;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrapp;
     justify-content: flex-start;
     align-items: center;
@@ -153,9 +159,51 @@ footer{
     border: 1px red solid;
     &__image{
         object-fit: cover;
+        height:70vw;
+        width:100%;
+        margin-top:-50px;
     }
     &__newtext{
         color: $color-green;
         background: $color-tertiary;
+    }
+}
+/*************** Les pages de menus***************/
+.main-complet{
+    &__image{
+        height:70vw;
+        width: 100%;
+        &--alf{            
+            background: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg") 0 0;  
+            background-size: cover;         
+        }
+    }
+}
+.main-main{
+    background-color: white;
+    margin-top: -20vw;
+    border-radius: 4rem 4rem 0 0;
+}
+.title-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size:1.7rem;
+    &__h1{
+        font-weight: bold;
+        padding-left: 1rem;
+    }
+    &__icon{
+        padding-right: 2rem;
+    }
+}
+.menus{
+    &__h2{
+        font-weight: normal;
+        margin-left: 1rem;
+        border-style: solid;
+        border-width: 0 0 5px 0;
+        border-image: linear-gradient($color-tertiary ,transparent)1;
     }
 }

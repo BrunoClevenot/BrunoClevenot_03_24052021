@@ -1,3 +1,5 @@
+@charset "UTF-8";
+/* Général*/
 body {
   font-family: Roboto, Shrikhand, sans;
   font-size: 12pt;
@@ -10,38 +12,7 @@ a {
 }
 
 .shrikhand {
-  font-family: Shrikhand;
-}
-
-.header {
-  background-color: #EAEAEA;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.header__text {
-  padding-left: 1rem;
-}
-
-.image-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 3px 4px #939393;
-  margin-top: 1rem;
-  margin-bottom: 3px;
-}
-.image-header--logo {
-  flex-grow: 1;
-  text-align: center;
-}
-.image-header__marque {
-  padding-left: 1rem;
-}
-.image-header--hidden {
-  display: none;
+  font-family: Shrikhand, Roboto, sans;
 }
 
 /* Le footer*/
@@ -70,6 +41,41 @@ footer {
 .foot--only {
   padding-left: 1rem;
   padding-bottom: 2.1rem;
+}
+
+/*************** Page d'accueil***************/
+.header {
+  background-color: #EAEAEA;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.header__text {
+  padding-left: 1rem;
+}
+
+.image-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 4px #939393;
+  margin-top: 1rem;
+  margin-bottom: 3px;
+}
+.image-header--logo {
+  flex-grow: 1;
+  text-align: center;
+}
+.image-header__marque {
+  padding-left: 1rem;
+}
+.image-header--dell {
+  box-shadow: none;
+}
+.image-header--hidden {
+  display: none;
 }
 
 .loader {
@@ -150,7 +156,7 @@ footer {
   margin-left: 10vw;
   margin-top: 3vw;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrapp;
   justify-content: flex-start;
   align-items: center;
@@ -161,10 +167,52 @@ footer {
 }
 .boite-resto__image {
   object-fit: cover;
+  height: 70vw;
+  width: 100%;
+  margin-top: -50px;
 }
 .boite-resto__newtext {
   color: #008768;
   background: #99E2D0;
+}
+
+/*************** Les pages de menus***************/
+.main-complet__image {
+  height: 70vw;
+  width: 100%;
+}
+.main-complet__image--alf {
+  background: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg") 0 0;
+  background-size: cover;
+}
+
+.main-main {
+  background-color: white;
+  margin-top: -20vw;
+  border-radius: 4rem 4rem 0 0;
+}
+
+.title-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.7rem;
+}
+.title-menu__h1 {
+  font-weight: bold;
+  padding-left: 1rem;
+}
+.title-menu__icon {
+  padding-right: 2rem;
+}
+
+.menus__h2 {
+  font-weight: normal;
+  margin-left: 1rem;
+  border-style: solid;
+  border-width: 0 0 5px 0;
+  border-image: linear-gradient(#99E2D0, transparent) 1;
 }
 
 /*# sourceMappingURL=style.css.map */
