@@ -3,6 +3,11 @@ body{
 
     font-family: Roboto, Shrikhand, sans;
     font-size: 12pt;
+    width:95vw;
+    max-width:800px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
 }
 a{
     color: black;
@@ -103,6 +108,9 @@ footer{
         color: $color-tertiary;
     }
 }
+.container{
+    width: 100%;
+}
 .title{
     text-align: center;
     &__h1{
@@ -116,20 +124,50 @@ footer{
         background: radial-gradient(ellipse at top left, $color-secondary,transparent), radial-gradient(ellipse at bottom right,$color-primary,transparent);
         margin-left: auto;
         margin-right: auto;
-        border-radius: 2rem;
+        border-radius: 1rem;
         box-shadow: 5px 5px 5px lighten($color-gris,25);
     }
 }
+.fonctionnement{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: 1px solid violet;
+    flex-wrap: wrap;
+    &__h2{
+        flex-grow: 1;
+        margin: auto;
+        width: 100vw;
+        max-width: 800px;
+    }
+}
+.restaurants{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: 1px solid limegreen;
+    flex-wrap: wrap;
+    &__h2{
+        flex-grow: 1;
+        margin: auto;
+        width: 100vw;
+        max-width: 800px;
+    }
+}
 .boite-fonction{
-    width:80vw;
-    margin-left: 10vw;
-    margin-top: 3vw;
+    width:88vw;
+    max-width: 290px;
+    border:1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5vw;
+    margin-bottom: 1.5vw;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     box-shadow: 5px 5px 5px lighten($color-gris,15);
-    border-radius: 2rem;
+    border-radius: 1rem;
     &__nombre{
         color: white;
         background: $color-primary;
@@ -138,6 +176,7 @@ footer{
         border-radius:1.2rem;
         text-align: center;
         margin-right: 1rem;
+        margin-left: -0.6rem;
     }
     &__icon{
         color: $color-gris;
@@ -145,27 +184,39 @@ footer{
     }
 }   
 .boite-resto{
-    width:80vw;
-    margin-left: 10vw;
-    margin-top: 3vw;
+    width:90vw;
+    max-width: 290px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5vw;
+    margin-bottom: 1.5vw;
     display: flex;
     flex-direction: column;
     flex-wrap: wrapp;
     justify-content: flex-start;
     align-items: center;
     box-shadow: 5px 5px 5px lighten($color-gris,15);
-    border-radius: 2rem;
+    border-radius: 1rem;
     overflow: hidden;
     border: 1px red solid;
     &__image{
         object-fit: cover;
         height:70vw;
+        max-height: 180px;
         width:100%;
         margin-top:-50px;
     }
     &__newtext{
         color: $color-green;
         background: $color-tertiary;
+        width: 80px;
+        height: 40px;
+        text-align: center;
+        font-size: 0.7rem;
+        font-weight: bold;
+        margin-top: -125px;
+        margin-bottom: 50px;
+        margin-left: 175px;
     }
 }
 /*************** Les pages de menus***************/
@@ -199,11 +250,74 @@ footer{
     }
 }
 .menus{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;  
     &__h2{
         font-weight: normal;
-        margin-left: 1rem;
-        border-style: solid;
-        border-width: 0 0 5px 0;
-        border-image: linear-gradient($color-tertiary ,transparent)1;
+        margin: 0 0 2px 1rem;
+        width: 100vw;
     }
+    &__form{
+        background-color: $color-tertiary;
+        height:5px;
+        width: 60px;
+        margin-left: 1rem;
+        margin-right:50vw;
+        margin-top:1px;
+    }
+    &__container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 290px;
+        height: 53px;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        box-shadow: 5px 5px 5px lighten($color-gris,15);
+        border-radius: 1rem;
+        
+        overflow: hidden;
+        font-size: 0.9rem;
+        margin-top:10px;
+        margin-bottom: 10px;
+    }
+    &__text{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap:wrap; 
+        margin-left:auto;
+        margin-right: auto;
+        &--title{
+            font-weight: bold;
+            flex-grow: 1;
+            margin: auto auto auto 0.5rem;
+            flex-grow: 1;
+        }
+        &--subtitle{
+            
+            margin: auto auto auto 0.5rem;
+        }
+        &--price{
+            font-weight: bold;
+            margin: auto 0.5rem auto auto;
+        }
+    }
+    &__OK{
+        color: white;
+        background-color: $color-tertiary;
+        text-align: center;
+        vertical-align: center;
+        width: 53px;
+        height: 53px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+        margin-top: -16px;
+    }
+
 }
