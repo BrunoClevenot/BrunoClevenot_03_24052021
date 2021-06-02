@@ -2,27 +2,6 @@
     0%{
         transform:rotate(0deg);
     }
-    13%{
-        transform:rotate(45deg);
-    }
-    25%{
-        transform:rotate(95deg);
-    }
-    37%{
-        transform:rotate(135deg);
-    }
-    50%{
-        transform:rotate(180deg);
-    }
-    63%{
-        transform:rotate(220deg);
-    }
-    75%{
-        transform:rotate(270deg);
-    }
-    87%{
-        transform:rotate(305deg);
-    }
     100%{
         transform:rotate(360deg);
         
@@ -32,58 +11,16 @@
     0%{
         transform:rotate(0deg);
     }
-    13%{
-        transform:rotate(-90deg);
-    }
-    25%{
-        transform:rotate(-190deg);
-    }
-    37%{
-        transform:rotate(-270deg);
-    }
-    50%{
-        transform:rotate(-360deg);
-    }
-    63%{
-        transform:rotate(-440deg);
-    }
-    75%{
-        transform:rotate(-540deg);
-    }
-    87%{
-        transform:rotate(-610deg);
-    }
     100%{
         transform:rotate(-720deg);
     }
 }
 @keyframes anim-ico{
     0%{
-        transform:rotate(90deg);
-    }
-    13%{
-        transform:rotate(45deg);
-    }
-    25%{
-        transform:rotate(185deg);
-    }
-    37%{
-        transform:rotate(135deg);
-    }
-    50%{
-        transform:rotate(270deg);
-    }
-    63%{
-        transform:rotate(220deg);
-    }
-    75%{
-        transform:rotate(360deg);
-    }
-    87%{
-        transform:rotate(305deg);
+        transform:rotate(0deg);
     }
     100%{
-        transform:rotate(450deg);
+        transform:rotate(720deg);
     }
 }
 @keyframes hidden-loader{
