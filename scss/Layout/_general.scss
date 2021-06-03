@@ -287,8 +287,20 @@ footer{
         height:70vw;
         max-height: 700px;
         width: 100%;
-        &--alf{            
+        &--alfa{            
             background: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg") 0 0;  
+            background-size: cover;         
+        }
+        &--alfb{            
+            background: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg") 0 0;  
+            background-size: cover;         
+        }
+        &--alfc{            
+            background: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg") 0 0;  
+            background-size: cover;         
+        }
+        &--alfd{            
+            background: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg") 0 0;  
             background-size: cover;         
         }
     }
@@ -305,7 +317,7 @@ footer{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    font-size:1.6rem;
+    font-size:1.3rem;
     &__h1{
         font-weight: bold;
         padding-left: 1rem;
@@ -318,7 +330,6 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border:1px solid yellow;
     margin:0;
     margin-bottom: 1.5em;
     &__h2{
