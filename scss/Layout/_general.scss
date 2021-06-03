@@ -135,6 +135,9 @@ footer{
 }
 .container{
     width: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 .title{
     text-align: center;
@@ -292,6 +295,7 @@ footer{
 }
 .main-main{
     background-color: white;
+    margin:0;
     margin-top: -15vw;
     border-radius: 4rem 4rem 0 0;
     background-color: lighten($color-fond-gris,2%);
@@ -301,7 +305,7 @@ footer{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    font-size:1.7rem;
+    font-size:1.6rem;
     &__h1{
         font-weight: bold;
         padding-left: 1rem;
@@ -315,6 +319,8 @@ footer{
     flex-direction: column;
     justify-content: space-between;
     border:1px solid yellow;
+    margin:0;
+    margin-bottom: 1.5em;
     &__h2{
         font-weight: normal;
         margin: 0 0 2px 1em;
@@ -342,8 +348,8 @@ footer{
         border-radius: 1rem;
         overflow: hidden;
         font-size: 1rem;
-        margin-top:10px;
-        margin-bottom: 10px;
+        margin-top:1.5em;
+        margin-bottom:0.4em;
     }
     &__text{
         display: flex;
@@ -378,15 +384,22 @@ footer{
         vertical-align: center;
         width: 53px;
         height: 53px;
+        transform: rotate(180deg);
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         background-size: cover;
+        &:hover{
+            animation-name: anim-coche;
+            animation-duration: $duree;
+        }
     }
 }
 .button{
     text-align: center;
+    margin: auto;
+    padding-bottom: 1.5em;
     &__command{
         width: 8rem;
         height:auto;

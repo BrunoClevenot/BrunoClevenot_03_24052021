@@ -31,6 +31,14 @@
     transform: translateY(-100vh);
   }
 }
+@keyframes anim-coche {
+  0% {
+    transform: scale(180deg), scale(0), translateX(0);
+  }
+  100% {
+    transform: scale(0deg), scale(1), translateX(53px);
+  }
+}
 /* Général*/
 body {
   font-family: Roboto, Shrikhand, sans;
@@ -173,6 +181,9 @@ footer {
 
 .container {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .title {
@@ -336,6 +347,7 @@ footer {
 
 .main-main {
   background-color: white;
+  margin: 0;
   margin-top: -15vw;
   border-radius: 4rem 4rem 0 0;
   background-color: #efefef;
@@ -346,7 +358,7 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
 }
 .title-menu__h1 {
   font-weight: bold;
@@ -361,6 +373,8 @@ footer {
   flex-direction: column;
   justify-content: space-between;
   border: 1px solid yellow;
+  margin: 0;
+  margin-bottom: 1.5em;
 }
 .menus__h2 {
   font-weight: normal;
@@ -389,8 +403,8 @@ footer {
   border-radius: 1rem;
   overflow: hidden;
   font-size: 1rem;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 1.5em;
+  margin-bottom: 0.4em;
 }
 .menus__text {
   display: flex;
@@ -425,15 +439,22 @@ footer {
   vertical-align: center;
   width: 53px;
   height: 53px;
+  transform: rotate(180deg);
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   background-size: cover;
 }
+.menus__OK:hover {
+  animation-name: anim-coche;
+  animation-duration: 2000ms;
+}
 
 .button {
   text-align: center;
+  margin: auto;
+  padding-bottom: 1.5em;
 }
 .button__command {
   width: 8rem;
