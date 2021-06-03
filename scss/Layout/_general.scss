@@ -32,7 +32,9 @@ footer{
     &__icon{
         padding-right: 1rem;
     }
-
+    &--h2{
+        padding-left: 1rem;
+    }
     &--a{
         padding-left: 1rem;
     }
@@ -77,14 +79,19 @@ footer{
 }
 .loader
 {
-    height: 1vh;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
     text-align: center;
     display:flex;
     justify-content: center;
     align-items: center;
-    transform: scale(0);
     animation-name: hidden-loader;
-    animation-duration: $duree; 
+    animation-duration: $duree;
+    animation-timing-function: cubic-bezier(1,0,1,1);
+    transform: scale(0); 
     &__external{
         margin:auto;
         padding: auto;
@@ -147,6 +154,10 @@ footer{
         box-shadow: 5px 5px 5px lighten($color-gris,25);
     }
 }
+.display-br{
+    @include no-mobile;
+
+}
 .fonctionnement{
     display:flex;
     flex-direction: column;
@@ -157,6 +168,7 @@ footer{
     &__h2{
         flex-grow: 1;
         margin: auto;
+        margin-bottom: 1em;
         width: 100vw;
         max-width: 800px;
     }
@@ -171,6 +183,7 @@ footer{
     &__h2{
         flex-grow: 1;
         margin: auto;
+        margin-bottom: 1em;
         width: 100vw;
         max-width: 800px;
     }

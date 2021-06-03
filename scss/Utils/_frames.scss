@@ -3,7 +3,7 @@
         transform:rotate(0deg);
     }
     100%{
-        transform:rotate(360deg);
+        transform:rotate(720deg);
         
     }
 }
@@ -12,7 +12,7 @@
         transform:rotate(0deg);
     }
     100%{
-        transform:rotate(-720deg);
+        transform:rotate(-1440deg);
     }
 }
 @keyframes anim-ico{
@@ -20,26 +20,14 @@
         transform:rotate(0deg);
     }
     100%{
-        transform:rotate(720deg);
+        transform:rotate(1440deg);
     }
 }
 @keyframes hidden-loader{
     0%{
-        height:100vh;
-        transform: scale(1);
+        transform: translateY(0);
     }
-    10%{
-        height: 100vh;
-        transform: scale(1);
-    }
-    95%{
-        height: 100vh;
-        transform: scale(1);
-    }
-
     100%{
-        height:1vh;
-        transform: scale(0);
-        
+        transform: translateY(-100vh);
     }
 }

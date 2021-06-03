@@ -10,3 +10,8 @@ $duree:2000ms;
         font-size:0.7rem;
     }
 }
+@mixin no-mobile{
+    @media screen and (min-width: 501px){
+        display:none
+    }
+}
