@@ -25,10 +25,18 @@
 }
 @keyframes hidden-loader {
   0% {
-    transform: translateY(0);
+    transform: translateX(-50vw);
   }
   100% {
-    transform: translateY(-100vh);
+    transform: translateX(200vw);
+  }
+}
+@keyframes visible-container {
+  0% {
+    transform: translateX(-200vw);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 @keyframes anim-coche {
@@ -134,8 +142,8 @@ footer {
   justify-content: center;
   align-items: center;
   animation-name: hidden-loader;
-  animation-duration: 2000ms;
-  animation-timing-function: cubic-bezier(1, 0, 1, 1);
+  animation-duration: 3000ms;
+  animation-timing-function: linear;
   transform: scale(0);
 }
 .loader__external {
@@ -152,7 +160,7 @@ footer {
   display: flex;
   align-items: center;
   animation-name: anim-ext;
-  animation-duration: 2000ms;
+  animation-duration: 3000ms;
 }
 .loader__internal {
   padding: auto;
@@ -168,7 +176,7 @@ footer {
   display: flex;
   align-items: center;
   animation-name: anim-int;
-  animation-duration: 2000ms;
+  animation-duration: 3000ms;
 }
 .loader__icon {
   margin: auto;
@@ -176,7 +184,7 @@ footer {
   font-size: 20vh;
   color: #99E2D0;
   animation-name: anim-ico;
-  animation-duration: 2000ms;
+  animation-duration: 3000ms;
 }
 
 .container {
@@ -184,6 +192,9 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  animation-name: visible-container;
+  animation-duration: 1800ms;
+  animation-timing-function: linear;
 }
 
 .title {
@@ -459,7 +470,7 @@ footer {
 }
 .menus__OK:hover {
   animation-name: anim-coche;
-  animation-duration: 2000ms;
+  animation-duration: 3000ms;
 }
 
 .button {

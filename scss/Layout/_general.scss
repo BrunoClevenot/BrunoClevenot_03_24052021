@@ -79,9 +79,9 @@ footer{
 }
 .loader
 {
-    position: fixed;
+    position:fixed;
     top:0;
-    left:0;
+    left: 0;
     width: 100vw;
     height: 100vh;
     text-align: center;
@@ -90,7 +90,7 @@ footer{
     align-items: center;
     animation-name: hidden-loader;
     animation-duration: $duree;
-    animation-timing-function: cubic-bezier(1,0,1,1);
+    animation-timing-function: linear;
     transform: scale(0); 
     &__external{
         margin:auto;
@@ -138,6 +138,9 @@ footer{
     display:flex;
     flex-direction: column;
     justify-content: flex-start;
+    animation-name: visible-container;
+    animation-duration: $duree2;
+    animation-timing-function: linear;
 }
 .title{
     text-align: center;

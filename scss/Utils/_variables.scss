@@ -4,7 +4,8 @@ $color-tertiary: #99E2D0;
 $color-fond-gris: #EAEAEA;
 $color-gris: #939393;
 $color-green: #008768;
-$duree:2000ms;
+$duree:3000ms;
+$duree2: 1800ms;
 @mixin mobile-only {
     @media screen and (max-width: 500px){
         font-size:0.7rem;

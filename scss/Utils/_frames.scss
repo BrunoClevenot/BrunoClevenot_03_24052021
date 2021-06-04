@@ -25,10 +25,18 @@
 }
 @keyframes hidden-loader{
     0%{
-        transform: translateY(0);
+        transform: translateX(-50vw);
     }
     100%{
-        transform: translateY(-100vh);
+        transform: translateX(200vw);
+    }
+}
+@keyframes visible-container{
+    0%{
+        transform: translateX(-200vw);
+    }
+    100%{
+        transform: translateX(0);
     }
 }
 @keyframes anim-coche{
