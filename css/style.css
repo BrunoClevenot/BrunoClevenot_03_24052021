@@ -197,6 +197,45 @@ footer {
   animation-timing-function: linear;
 }
 
+.btn {
+  position: relative;
+  z-index: 1;
+  width: 14rem;
+  margin: auto;
+  height: 4rem;
+  background: radial-gradient(ellipse at top left, #FF79DA, transparent), radial-gradient(ellipse at bottom right, #9356DC, transparent);
+  border-radius: 30px;
+  box-shadow: 5px 5px 5px lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn:hover .btn__light {
+  opacity: 1;
+}
+.btn__light {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background: radial-gradient(ellipse at top left, #ffc6ef, transparent), radial-gradient(ellipse at bottom right, #bc95e9, transparent);
+  height: 4rem;
+  width: 14rem;
+  border-radius: 30px;
+  box-shadow: 8px 8px 8px lightgray;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity .btn__light duree2;
+}
+.btn__command {
+  color: white;
+}
+
 .title {
   text-align: center;
 }
@@ -205,15 +244,12 @@ footer {
   font-size: 1.7rem;
 }
 .title__btn {
-  width: 13rem;
-  height: auto;
   color: white;
-  background: radial-gradient(ellipse at top left, #FF79DA, transparent), radial-gradient(ellipse at bottom right, #9356DC, transparent);
-  margin-left: auto;
-  margin-right: auto;
-  padding: 15px;
-  border-radius: 30px;
-  box-shadow: 5px 5px 5px lightgray;
+  height: 4rem;
+  width: 14rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (min-width: 501px) {
@@ -418,7 +454,7 @@ footer {
   background-color: white;
   width: 86vw;
   max-width: 768px;
-  height: 53px;
+  height: 10vh;
   margin-right: auto;
   margin-left: auto;
   box-shadow: 5px 5px 5px #b9b9b9;
@@ -444,11 +480,11 @@ footer {
 }
 .menus__text--title {
   font-weight: bold;
-  margin: auto auto auto 0.5em;
+  margin: 0.5em 0.5em 0.5em 0.5em;
 }
 .menus__text--subtitle {
   width: 100%;
-  margin: auto auto auto 0.5em;
+  margin: 0.5em 0.5em 0.5em 0.5em;
 }
 .menus__text--price {
   font-weight: bold;
@@ -459,8 +495,8 @@ footer {
   background-color: #99E2D0;
   text-align: center;
   vertical-align: center;
-  width: 53px;
-  height: 53px;
+  width: 10vh;
+  height: 10vh;
   transform: rotate(180deg);
   display: flex;
   flex-direction: row;
@@ -473,21 +509,9 @@ footer {
   animation-duration: 3000ms;
 }
 
-.button {
-  text-align: center;
-  margin: auto;
-  padding-bottom: 1.5em;
-}
-.button__command {
-  width: 8rem;
-  height: auto;
-  color: white;
-  background: radial-gradient(ellipse at top left, #FF79DA, transparent), radial-gradient(ellipse at bottom right, #9356DC, transparent);
-  margin-left: auto;
-  margin-right: auto;
-  padding: 15px;
-  border-radius: 30px;
-  box-shadow: 5px 5px 5px lightgray;
+.btn2 {
+  padding: auto;
+  padding-bottom: 2em;
 }
 
 /*# sourceMappingURL=style.css.map */
