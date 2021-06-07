@@ -1,0 +1,19 @@
+{
+  "name": "ohmygood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./scss/scss.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrunoClevenot/BrunoClevenot_03_24052021.git"
+  },
+  "author": "Bruno Clévenot",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrunoClevenot/BrunoClevenot_03_24052021/issues"
+  },
+  "homepage": "https://github.com/BrunoClevenot/BrunoClevenot_03_24052021#readme"
+}
