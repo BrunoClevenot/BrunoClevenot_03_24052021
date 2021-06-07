@@ -34,6 +34,8 @@ footer{
     }
     &--h2{
         padding-left: 1rem;
+        margin:0;
+        margin-bottom: 1rem;
     }
     &--a{
         padding-left: 1rem;
@@ -148,10 +150,9 @@ footer{
     width: 14rem;
     margin:auto;
     margin-top: 1em;
-    margin-bottom: 1em;
-	height: 4rem;
+	height: 3rem;
     background: radial-gradient(ellipse at top left, $color-secondary,transparent), radial-gradient(ellipse at bottom right,$color-primary,transparent);
-    border-radius: 30px;
+    border-radius: 2000px;
     box-shadow: 5px 5px 5px lighten($color-gris,25);
     display: flex;
     justify-content: center;
@@ -169,16 +170,16 @@ footer{
 	    right:0;
         z-index: -1;
 	    background:radial-gradient(ellipse at top left, lighten($color-secondary,15%),transparent), radial-gradient(ellipse at bottom right,lighten($color-primary,15%),transparent);
-	    height: 4rem;
+	    height: 3rem;
 	    width:14rem;
-	    border-radius:30px;
+	    border-radius:2000px;
 	    box-shadow: 8px 8px 8px lighten($color-gris,25);
         margin: auto;
 	    display: flex;
 	    justify-content: center;
 	    align-items:center;
 	    opacity:0;
-        transition: opacity &duree2;
+        transition: opacity $duree3;
     }
     &__command{
         color: white;
@@ -213,8 +214,8 @@ footer{
     &__h2{
         flex-grow: 1;
         margin: auto;
+        width: 100%;
         margin-bottom: 1em;
-        width: 100vw;
         max-width: 800px;
     }
 }
@@ -352,6 +353,8 @@ footer{
     margin-top: -15vw;
     border-radius: 4rem 4rem 0 0;
     background-color: lighten($color-fond-gris,2%);
+    padding:0;
+    padding-bottom: 1em;
 }
 .title-menu{
     display: flex;
@@ -376,7 +379,6 @@ footer{
     &__h2{
         font-weight: normal;
         margin: 0 0 2px 1em;
-        width: 100vw;
     }
     &__form{
         background-color: $color-tertiary;

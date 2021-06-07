@@ -87,6 +87,8 @@ footer {
 }
 .foot--h2 {
   padding-left: 1rem;
+  margin: 0;
+  margin-bottom: 1rem;
 }
 .foot--a {
   padding-left: 1rem;
@@ -203,10 +205,9 @@ footer {
   width: 14rem;
   margin: auto;
   margin-top: 1em;
-  margin-bottom: 1em;
-  height: 4rem;
+  height: 3rem;
   background: radial-gradient(ellipse at top left, #FF79DA, transparent), radial-gradient(ellipse at bottom right, #9356DC, transparent);
-  border-radius: 30px;
+  border-radius: 2000px;
   box-shadow: 5px 5px 5px lightgray;
   display: flex;
   justify-content: center;
@@ -223,16 +224,16 @@ footer {
   right: 0;
   z-index: -1;
   background: radial-gradient(ellipse at top left, #ffc6ef, transparent), radial-gradient(ellipse at bottom right, #bc95e9, transparent);
-  height: 4rem;
+  height: 3rem;
   width: 14rem;
-  border-radius: 30px;
+  border-radius: 2000px;
   box-shadow: 8px 8px 8px lightgray;
   margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 0;
-  transition: opacity .btn__light duree2;
+  transition: opacity 300ms;
 }
 .btn__command {
   color: white;
@@ -271,8 +272,8 @@ footer {
 .fonctionnement__h2 {
   flex-grow: 1;
   margin: auto;
+  width: 100%;
   margin-bottom: 1em;
-  width: 100vw;
   max-width: 800px;
 }
 
@@ -412,6 +413,8 @@ footer {
   margin-top: -15vw;
   border-radius: 4rem 4rem 0 0;
   background-color: #efefef;
+  padding: 0;
+  padding-bottom: 1em;
 }
 
 .title-menu {
@@ -439,7 +442,6 @@ footer {
 .menus__h2 {
   font-weight: normal;
   margin: 0 0 2px 1em;
-  width: 100vw;
 }
 .menus__form {
   background-color: #99E2D0;
