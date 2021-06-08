@@ -152,7 +152,7 @@ footer{
     margin-top: 1em;
 	height: 3rem;
     background: radial-gradient(ellipse at top left, $color-secondary,transparent), radial-gradient(ellipse at bottom right,$color-primary,transparent);
-    border-radius: 2000px;
+    border-radius: 300px;
     box-shadow: 5px 5px 5px lighten($color-gris,25);
     display: flex;
     justify-content: center;
@@ -172,7 +172,7 @@ footer{
 	    background:radial-gradient(ellipse at top left, lighten($color-secondary,15%),transparent), radial-gradient(ellipse at bottom right,lighten($color-primary,15%),transparent);
 	    height: 3rem;
 	    width:14rem;
-	    border-radius:2000px;
+	    border-radius:300px;
 	    box-shadow: 8px 8px 8px lighten($color-gris,25);
         margin: auto;
 	    display: flex;
@@ -248,9 +248,12 @@ footer{
     align-items: center;
     box-shadow: 5px 5px 5px lighten($color-gris,15);
     border-radius: 1rem;
+    &--pink{
+        background-color: lighten($color-secondary,23%);
+    }
     &__nombre{
         color: white;
-        background: $color-primary;
+        background-color: $color-primary;
         width:1.2rem;
         height: 1.2rem;
         border-radius:1.2rem;
@@ -261,6 +264,9 @@ footer{
     &__icon{
         color: $color-gris;
         margin-right: 1rem;
+        &--pink{
+            color: $color-primary;
+        }
     }
 }   
 .boite-resto{
@@ -322,6 +328,41 @@ footer{
         margin-top:3px;
         margin-bottom: 5px;
     }
+    &__icone{
+        position: relative;
+        z-index: 1;
+        width: 1.2rem;
+        height: 1.2rem;
+        margin:auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover{
+            color: $color-primary;
+            & .boite-resto__icone--rose{
+                opacity:1;
+                transform:scaleY(1);
+            }
+        }
+        &--rose{
+            position: absolute;
+	        top:0;
+	        left:0;
+	        bottom:0;
+	        right:0;
+            z-index: -1;
+	        color:$color-primary;
+	        height: 1.2rem;
+	        width:1.2rem;
+            margin: auto;
+	        display: flex;
+	        justify-content: center;
+	        align-items:center;
+	        opacity:0;
+            transform:scaleY(0);
+            transition: all $duree4;
+        }
+    }
 }
 /*************** Les pages de menus***************/
 .main-complet{
@@ -367,7 +408,40 @@ footer{
         padding-left: 1rem;
     }
     &__icon{
-        padding-right: 2rem;
+        position: relative;
+        z-index: 1;
+        width: 1.2rem;
+        height: 1.2rem;
+        margin:auto;
+        margin-right: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover{
+            color: $color-primary;
+            & .title-menu__icon--rose{
+                opacity:1;
+                transform:scaleY(1);
+            }
+        }
+        &--rose{
+            position: absolute;
+	        top:0;
+	        left:0;
+	        bottom:0;
+	        right:0;
+            z-index: -1;
+	        color:$color-primary;
+	        height: 1.2rem;
+	        width:1.2rem;
+            margin: auto;
+	        display: flex;
+	        justify-content: center;
+	        align-items:center;
+	        opacity:0;
+            transform: scaleY(0)
+            transition: all $duree4;
+        }
     }
 }
 .menus{
@@ -395,7 +469,7 @@ footer{
         background-color: white;
         width: 86vw;
         max-width: 768px;
-        height: 10vh;
+        height: 64px;
         margin-right: auto;
         margin-left: auto;
         box-shadow: 5px 5px 5px lighten($color-gris,15);
@@ -420,11 +494,20 @@ footer{
         }
         &--title{
             font-weight: bold;
-            margin: 0.5em 0.5em 0.5em 0.5em;
+            margin: 0em 0.5em 0.5em 0.5em;
+            max-width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         &--subtitle{
-            width:100%;
+            
+            max-width: 100%;
+            
             margin: 0.5em 0.5em 0.5em 0.5em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         &--price{
             font-weight: bold;
@@ -436,21 +519,19 @@ footer{
         background-color: $color-tertiary;
         text-align: center;
         vertical-align: center;
-        width: 10vh;
-        height: 10vh;
+        width: 64px;
+        height: 64px;
         transform: rotate(180deg);
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         background-size: cover;
+        flex-grow: 0;
+        flex-shrink: 0;
         &:hover{
             animation-name: anim-coche;
             animation-duration: $duree;
         }
     }
-}
-.btn2{
-    padding: auto;
-    padding-bottom: 2em;
 }

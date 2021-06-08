@@ -7,6 +7,7 @@ $color-green: #008768;
 $duree:3000ms;
 $duree2: 1800ms;
 $duree3: 300ms;
+$duree4:900ms;
 @mixin mobile-only {
     @media screen and (max-width: 500px){
         font-size:0.7rem;
