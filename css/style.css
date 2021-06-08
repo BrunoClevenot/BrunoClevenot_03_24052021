@@ -423,6 +423,7 @@ footer {
   opacity: 0;
   transform: scaleY(0);
   transition: all 900ms;
+  transition-timing-function: ease-in-out;
 }
 
 /*************** Les pages de menus***************/
@@ -502,7 +503,9 @@ footer {
   justify-content: center;
   align-items: center;
   opacity: 0;
+  transform: scaleY(0);
   transition: all 900ms;
+  transition-timing-function: ease-in-out;
 }
 
 .menus {
