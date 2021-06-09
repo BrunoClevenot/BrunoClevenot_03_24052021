@@ -480,6 +480,28 @@ footer{
         font-size: 1rem;
         margin-top:1.5em;
         margin-bottom:0.4em;
+        animation: visible-menu;
+        animation-duration: $duree;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-out;
+        opacity:0;
+        &--delai1{
+            animation-delay: $delai;
+            
+        }
+        &--delai2{
+            animation-delay: $delai+300;
+            
+        }
+        &--delai3{
+            animation-delay: $delai+600;
+            
+        }
+        &--delai4{
+            animation-delay: $delai+900;
+            
+        }
+        
     }
     &__text{
         display: flex;
