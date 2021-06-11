@@ -588,9 +588,15 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  max-width: 100%;
   margin-left: 0;
   margin-right: 0;
   flex-grow: 1;
+}
+@media screen and (max-width: 500px) {
+  .menus__text {
+    font-size: 0.8rem;
+  }
 }
 .menus__text--modif {
   display: flex;
@@ -600,24 +606,34 @@ footer {
 }
 .menus__text--title {
   font-weight: bold;
-  margin: 0em 0.5em 0.5em 0.5em;
+  margin: 0.8em 0em 0.2em 0.5em;
   width: auto;
-  max-width: 60%;
+  max-width: 80%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+@media screen and (max-width: 500px) {
+  .menus__text--title {
+    font-size: 0.8rem;
+  }
 }
 .menus__text--subtitle {
   width: auto;
-  max-width: 60%;
-  margin: 0.5em 0.5em 0.5em 0.5em;
+  max-width: 80%;
+  margin: 0em 0em 0.8em 0.5em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+@media screen and (max-width: 500px) {
+  .menus__text--subtitle {
+    font-size: 0.8rem;
+  }
+}
 .menus__text--price {
   font-weight: bold;
-  margin: auto 0.5em auto 0.5em;
+  margin: 0 0.2em 0.8em -9em;
 }
 .menus__OK {
   color: white;
@@ -626,7 +642,7 @@ footer {
   vertical-align: center;
   width: 64px;
   height: 64px;
-  margin: auto;
+  margin: 0;
   margin-right: -64px;
   display: flex;
   flex-direction: row;

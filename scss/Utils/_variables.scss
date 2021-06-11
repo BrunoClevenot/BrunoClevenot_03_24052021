@@ -11,7 +11,7 @@ $duree4: 900ms;
 $delai: 1000ms;
 @mixin mobile-only {
     @media screen and (max-width: 500px){
-        font-size:0.7rem;
+        font-size:0.8rem;
     }
 }
 @mixin no-mobile{
