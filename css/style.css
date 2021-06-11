@@ -577,6 +577,13 @@ footer {
 .menus__container--delai4 {
   animation-delay: 1900ms;
 }
+.menus__container:hover .menus__OK {
+  margin-right: 0;
+  transform: scaleX(1);
+}
+.menus__container:hover .menus__OK--rotate {
+  transform: rotate(360deg);
+}
 .menus__text {
   display: flex;
   flex-direction: column;
@@ -594,13 +601,15 @@ footer {
 .menus__text--title {
   font-weight: bold;
   margin: 0em 0.5em 0.5em 0.5em;
-  max-width: 100%;
+  width: auto;
+  max-width: 60%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .menus__text--subtitle {
-  max-width: 100%;
+  width: auto;
+  max-width: 60%;
   margin: 0.5em 0.5em 0.5em 0.5em;
   white-space: nowrap;
   overflow: hidden;
@@ -617,7 +626,8 @@ footer {
   vertical-align: center;
   width: 64px;
   height: 64px;
-  transform: rotate(180deg);
+  margin: auto;
+  margin-right: -64px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -625,6 +635,12 @@ footer {
   background-size: cover;
   flex-grow: 0;
   flex-shrink: 0;
+  transform: scaleX(0);
+  transition: all 900ms;
+  transform-origin: bottom right;
+}
+.menus__OK--rotate {
+  transition: all 900ms;
 }
 
 /*# sourceMappingURL=style.css.map */
