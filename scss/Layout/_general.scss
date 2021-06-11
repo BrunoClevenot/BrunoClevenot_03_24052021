@@ -280,16 +280,18 @@ footer{
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     box-shadow: 5px 5px 5px lighten($color-gris,15);
     border-radius: 1rem;
     overflow: hidden;
     border: 1px red solid;
     &__image{
         object-fit: cover;
+        display: box;
         height:70vw;
         max-height: 180px;
         width:100%;
+        margin:0;
         margin-top:-50px;
         position:relative;
     }
@@ -308,8 +310,8 @@ footer{
         padding-bottom: 7px;
     }
     &__plus{
-        width:86vw;
-        max-width: 356px;
+        width:100%;
+        max-width: 350px;
         max-height: 60px;
         display:flex;
         flex-direction: row;
@@ -318,6 +320,7 @@ footer{
         &--adapt{
             max-height: 60px;
             flex-grow:0.7;
+            margin:auto;
         }
     }
     &__heading{
@@ -486,22 +489,17 @@ footer{
         animation-timing-function: ease-out;
         opacity:0;
         &--delai1{
-            animation-delay: $delai;
-            
+            animation-delay: $delai;    
         }
         &--delai2{
-            animation-delay: $delai+300;
-            
+            animation-delay: $delai+300;   
         }
         &--delai3{
-            animation-delay: $delai+600;
-            
+            animation-delay: $delai+600;   
         }
         &--delai4{
             animation-delay: $delai+900;
-            
         }
-        
     }
     &__text{
         display: flex;
@@ -525,9 +523,7 @@ footer{
             text-overflow: ellipsis;
         }
         &--subtitle{
-            
             max-width: 100%;
-            
             margin: 0.5em 0.5em 0.5em 0.5em;
             white-space: nowrap;
             overflow: hidden;
@@ -553,9 +549,5 @@ footer{
         background-size: cover;
         flex-grow: 0;
         flex-shrink: 0;
-        &:hover{
-            animation-name: anim-coche;
-            animation-duration: $duree;
-        }
     }
 }
