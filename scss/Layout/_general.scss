@@ -341,7 +341,6 @@ footer{
         justify-content: center;
         align-items: center;
         &:hover{
-            color: $color-primary;
             & .boite-resto__icone--rose{
                 opacity:1;
                 transform:scaleY(1);
@@ -401,6 +400,45 @@ footer{
     padding:0;
     padding-bottom: 1em;
 }
+label{
+	cursor:pointer;
+}
+input[type="checkbox"].toggle{
+	display: none;
+    & + label{
+        position: relative;
+        z-index: 1;
+	    font-size: 1.3rem;  
+	    color: black ;
+	    margin: auto ;
+        margin-right: 2rem;
+	    font-weight:400;
+	    transition: all 600ms;
+    }	
+    & + label::after{
+        position: absolute;
+        z-index: -1;
+	    top:0;
+	    right:0;
+	    bottom:0;
+	    left:0;
+        font-family: "Font Awesome\ 5 Free";
+        font-size: 1.3rem;  
+        color: $color-primary ;
+        margin: auto ;
+        content:'\f004';
+        font-weight:900;
+        transform: scale(0);
+        transition: all $duree5;
+    }
+    &:checked + label::after{
+        transform: scaleY(1); 
+    }
+    &:checked + label{
+        color:$color-primary;
+    }
+}
+
 .title-menu{
     display: flex;
     flex-direction: row;
@@ -410,43 +448,6 @@ footer{
     &__h1{
         font-weight: bold;
         padding-left: 1rem;
-    }
-    &__icon{
-        position: relative;
-        z-index: 1;
-        width: 1.2rem;
-        height: 1.2rem;
-        margin:auto;
-        margin-right: 2rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        &:hover{
-            color: $color-primary;
-            & .title-menu__icon--rose{
-                opacity:1;
-                transform:scaleY(1);
-            }
-        }
-        &--rose{
-            position: absolute;
-	        top:0;
-	        left:0;
-	        bottom:0;
-	        right:0;
-            z-index: -1;
-	        color:$color-primary;
-	        height: 1.2rem;
-	        width:1.2rem;
-            margin: auto;
-	        display: flex;
-	        justify-content: center;
-	        align-items:center;
-	        opacity:0;
-            transform: scaleY(0);
-            transition: all $duree4;
-            transition-timing-function: ease-in-out;
-        }
     }
 }
 .menus{

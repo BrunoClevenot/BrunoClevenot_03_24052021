@@ -415,9 +415,6 @@ footer {
   justify-content: center;
   align-items: center;
 }
-.boite-resto__icone:hover {
-  color: #9356DC;
-}
 .boite-resto__icone:hover .boite-resto__icone--rose {
   opacity: 1;
   transform: scaleY(1);
@@ -475,6 +472,46 @@ footer {
   padding-bottom: 1em;
 }
 
+label {
+  cursor: pointer;
+}
+
+input[type=checkbox].toggle {
+  display: none;
+}
+input[type=checkbox].toggle + label {
+  position: relative;
+  z-index: 1;
+  font-size: 1.3rem;
+  color: black;
+  margin: auto;
+  margin-right: 2rem;
+  font-weight: 400;
+  transition: all 600ms;
+}
+input[type=checkbox].toggle + label::after {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.3rem;
+  color: #9356DC;
+  margin: auto;
+  content: "";
+  font-weight: 900;
+  transform: scale(0);
+  transition: all 600ms;
+}
+input[type=checkbox].toggle:checked + label::after {
+  transform: scaleY(1);
+}
+input[type=checkbox].toggle:checked + label {
+  color: #9356DC;
+}
+
 .title-menu {
   display: flex;
   flex-direction: row;
@@ -485,43 +522,6 @@ footer {
 .title-menu__h1 {
   font-weight: bold;
   padding-left: 1rem;
-}
-.title-menu__icon {
-  position: relative;
-  z-index: 1;
-  width: 1.2rem;
-  height: 1.2rem;
-  margin: auto;
-  margin-right: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.title-menu__icon:hover {
-  color: #9356DC;
-}
-.title-menu__icon:hover .title-menu__icon--rose {
-  opacity: 1;
-  transform: scaleY(1);
-}
-.title-menu__icon--rose {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
-  color: #9356DC;
-  height: 1.2rem;
-  width: 1.2rem;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transform: scaleY(0);
-  transition: all 900ms;
-  transition-timing-function: ease-in-out;
 }
 
 .menus {
