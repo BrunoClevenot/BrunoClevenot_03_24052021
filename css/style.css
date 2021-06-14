@@ -214,6 +214,7 @@ footer {
 
 .btn {
   position: relative;
+  border: none;
   z-index: 1;
   width: 14rem;
   margin: auto;
