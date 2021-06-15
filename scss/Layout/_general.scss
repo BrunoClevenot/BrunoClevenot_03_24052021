@@ -411,6 +411,7 @@ input[type="checkbox"].toggle{
         margin-right: 2rem;
 	    font-weight:400;
 	    transition: all 600ms;
+        cursor: ns-resize;
     }	
     & + label::after{
         position: absolute;
@@ -427,6 +428,7 @@ input[type="checkbox"].toggle{
         font-weight:900;
         transform: scale(0);
         transition: all $duree5;
+        cursor: ns-resize;
     }
     &:checked + label::after{
         transform: scaleY(1); 
