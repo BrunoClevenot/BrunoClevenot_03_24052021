@@ -39,14 +39,6 @@
     transform: translateX(0);
   }
 }
-@keyframes anim-coche {
-  0% {
-    transform: rotate(0), scale(0), translate(0);
-  }
-  100% {
-    transform: rotate(-180deg), scale(1), translate(64px);
-  }
-}
 @keyframes visible-menu {
   0% {
     transform: translateY(5vh);
@@ -580,7 +572,7 @@ input[type=checkbox].toggle:checked + label {
 }
 .menus__container:hover .menus__OK {
   margin-right: 0;
-  transform: scaleX(1);
+  transform: translateX(1px);
 }
 .menus__container:hover .menus__OK--rotate {
   transform: rotate(360deg);
@@ -644,7 +636,7 @@ input[type=checkbox].toggle:checked + label {
   width: 64px;
   height: 64px;
   margin: 0;
-  margin-right: -64px;
+  margin-right: -4em;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -652,7 +644,7 @@ input[type=checkbox].toggle:checked + label {
   background-size: cover;
   flex-grow: 0;
   flex-shrink: 0;
-  transform: scaleX(0);
+  transform: translateX(65px);
   transition: all 900ms;
   transform-origin: bottom right;
 }

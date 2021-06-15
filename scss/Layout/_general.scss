@@ -409,7 +409,7 @@ input[type="checkbox"].toggle{
     & + label{
         position: relative;
         z-index: 1;
-	    font-size: 1.3rem;  
+        font-size: 1.3rem;  
 	    color: black ;
 	    margin: auto ;
         margin-right: 2rem;
@@ -504,8 +504,7 @@ input[type="checkbox"].toggle{
         }
         &:hover .menus__OK{
             margin-right: 0;
-            transform: scaleX(1);
-            
+            transform: translateX(1px);
         }
         &:hover .menus__OK--rotate{
             transform: rotate(360deg)
@@ -558,7 +557,7 @@ input[type="checkbox"].toggle{
         width: 64px;
         height: 64px;
         margin:0;
-        margin-right:-64px;
+        margin-right: -4em;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -566,7 +565,7 @@ input[type="checkbox"].toggle{
         background-size: cover;
         flex-grow: 0;
         flex-shrink: 0;
-        transform: scaleX(0);
+        transform: translateX(65px);
         transition: all $duree4;
         transform-origin: bottom right;
         &--rotate{

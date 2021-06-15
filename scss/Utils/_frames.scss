@@ -39,14 +39,6 @@
         transform: translateX(0);
     }
 }
-@keyframes anim-coche{
-    0%{
-        transform: rotate(0),scale(0),translate(0);
-    }
-    100%{
-        transform: rotate(-180deg),scale(1),translate(64px);
-    }
-}
 @keyframes visible-menu{
     0%{
         transform:translateY(5vh);
