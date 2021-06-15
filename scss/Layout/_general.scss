@@ -209,7 +209,6 @@ footer{
     display:flex;
     flex-direction: column;
     justify-content: space-around;
-    border: 1px solid violet;
     margin-top:1.5em;
     margin-bottom: 1.5em;
     &__h2{
@@ -224,7 +223,6 @@ footer{
     display:flex;
     flex-direction: row;
     justify-content: space-around;
-    border: 1px solid limegreen;
     flex-wrap: wrap;
     margin-bottom: 1.5rem;
     &__h2{
@@ -238,7 +236,6 @@ footer{
 .boite-fonction{
     width:88vw;
     max-width: 750px;
-    border:1px solid black;
     background-color: $color-fond-gris;
     margin-left: auto;
     margin-right: auto;
@@ -249,9 +246,6 @@ footer{
     align-items: center;
     box-shadow: 5px 5px 5px lighten($color-gris,15);
     border-radius: 1rem;
-    &--pink{
-        background-color: lighten($color-secondary,23%);
-    }
     &__nombre{
         color: white;
         background-color: $color-primary;
@@ -265,9 +259,12 @@ footer{
     &__icon{
         color: $color-gris;
         margin-right: 1rem;
-        &--pink{
-            color: $color-primary;
-        }
+    }
+    &:hover{
+        background-color: lighten($color-secondary,23%);
+    }
+    &:hover &__icon{
+        color: $color-primary;
     }
 }   
 .boite-resto{
@@ -285,7 +282,6 @@ footer{
     box-shadow: 5px 5px 5px lighten($color-gris,15);
     border-radius: 1rem;
     overflow: hidden;
-    border: 1px red solid;
     &__image{
         object-fit: cover;
         display: box;
