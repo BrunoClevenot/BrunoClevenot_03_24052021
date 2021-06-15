@@ -333,6 +333,7 @@ footer {
 }
 
 .boite-resto {
+  position: relative;
   width: 90vw;
   max-width: 350px;
   margin-left: 5px;
@@ -359,16 +360,15 @@ footer {
   position: relative;
 }
 .boite-resto__newtext {
+  position: absolute;
+  top: 0;
+  right: 15px;
   color: #008768;
   background: #99E2D0;
   width: 80px;
-  position: absolute;
   text-align: center;
   font-size: 0.7rem;
   font-weight: bold;
-  margin-top: 10px;
-  margin-bottom: 5px;
-  margin-left: 165px;
   padding-top: 7px;
   padding-bottom: 7px;
 }
@@ -395,37 +395,13 @@ footer {
   margin-bottom: 5px;
 }
 .boite-resto__icone {
-  position: relative;
-  z-index: 1;
-  width: 1.2rem;
-  height: 1.2rem;
+  width: auto;
+  height: auto;
   margin: auto;
+  padding: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.boite-resto__icone:hover .boite-resto__icone--rose {
-  opacity: 1;
-  transform: scaleY(1);
-}
-.boite-resto__icone--rose {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
-  color: #9356DC;
-  height: 1.2rem;
-  width: 1.2rem;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transform: scaleY(0);
-  transition: all 900ms;
-  transition-timing-function: ease-in-out;
 }
 
 /*************** Les pages de menus***************/
@@ -461,10 +437,6 @@ footer {
   padding-bottom: 1em;
 }
 
-label {
-  cursor: pointer;
-}
-
 input[type=checkbox].toggle {
   display: none;
 }
@@ -474,10 +446,17 @@ input[type=checkbox].toggle + label {
   font-size: 1.3rem;
   color: black;
   margin: auto;
-  margin-right: 2rem;
+  font-family: "Font Awesome 5 Free";
+  content: "";
   font-weight: 400;
   transition: all 600ms;
   cursor: ns-resize;
+  width: 1.3em;
+  height: 1.3em;
+  padding: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 input[type=checkbox].toggle + label::after {
   position: absolute;
@@ -495,6 +474,10 @@ input[type=checkbox].toggle + label::after {
   transform: scale(0);
   transition: all 600ms;
   cursor: ns-resize;
+  padding: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 input[type=checkbox].toggle:checked + label::after {
   transform: scaleY(1);

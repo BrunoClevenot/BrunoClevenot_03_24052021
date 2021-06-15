@@ -268,6 +268,7 @@ footer{
     }
 }   
 .boite-resto{
+    position:relative;
     width:90vw;
     max-width: 350px;
     margin-left: 5px;
@@ -293,16 +294,16 @@ footer{
         position:relative;
     }
     &__newtext{
+        position: absolute;
+        top:0;
+        right:15px;
         color: $color-green;
         background: $color-tertiary;
         width: 80px;
-        position: absolute;
         text-align: center;
         font-size: 0.7rem;
         font-weight: bold;
-        margin-top: 10px;
-        margin-bottom: 5px;
-        margin-left: 165px;
+
         padding-top:7px;
         padding-bottom: 7px;
     }
@@ -329,39 +330,13 @@ footer{
         margin-bottom: 5px;
     }
     &__icone{
-        position: relative;
-        z-index: 1;
-        width: 1.2rem;
-        height: 1.2rem;
+        width: auto;
+        height: auto;
         margin:auto;
+        padding: auto;
         display: flex;
         justify-content: center;
         align-items: center;
-        &:hover{
-            & .boite-resto__icone--rose{
-                opacity:1;
-                transform:scaleY(1);
-            }
-        }
-        &--rose{
-            position: absolute;
-	        top:0;
-	        left:0;
-	        bottom:0;
-	        right:0;
-            z-index: -1;
-	        color:$color-primary;
-	        height: 1.2rem;
-	        width:1.2rem;
-            margin: auto;
-	        display: flex;
-	        justify-content: center;
-	        align-items:center;
-	        opacity:0;
-            transform:scaleY(0);
-            transition: all $duree4;
-            transition-timing-function: ease-in-out;
-        }
     }
 }
 /*************** Les pages de menus***************/
@@ -397,9 +372,6 @@ footer{
     padding:0;
     padding-bottom: 1em;
 }
-label{
-	cursor:pointer;
-}
 input[type="checkbox"].toggle{
 	display: none;
     & + label{
@@ -408,10 +380,17 @@ input[type="checkbox"].toggle{
         font-size: 1.3rem;  
 	    color: black ;
 	    margin: auto ;
-        margin-right: 2rem;
+        font-family: "Font Awesome\ 5 Free";
+        content:'\f004';
 	    font-weight:400;
 	    transition: all 600ms;
         cursor: ns-resize;
+        width:1.3em;
+        height: 1.3em;
+        padding:auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }	
     & + label::after{
         position: absolute;
@@ -429,6 +408,10 @@ input[type="checkbox"].toggle{
         transform: scale(0);
         transition: all $duree5;
         cursor: ns-resize;
+        padding:auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     &:checked + label::after{
         transform: scaleY(1); 
