@@ -379,7 +379,6 @@ input[type="checkbox"].toggle{
         z-index: 1;
         font-size: 1.3rem;  
 	    color: black ;
-	    margin: auto ;
         font-family: "Font Awesome\ 5 Free";
         content:'\f004';
 	    font-weight:400;
@@ -388,6 +387,7 @@ input[type="checkbox"].toggle{
         width:1.3em;
         height: 1.3em;
         padding:auto;
+        margin:auto;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -401,14 +401,14 @@ input[type="checkbox"].toggle{
 	    left:0;
         font-family: "Font Awesome\ 5 Free";
         font-size: 1.3rem;  
-        color: $color-primary ;
-        margin: auto ;
+        color: $color-primary;
         content:'\f004';
         font-weight:900;
         transform: scale(0);
         transition: all $duree5;
         cursor: ns-resize;
         padding:auto;
+        margin:auto;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -430,6 +430,13 @@ input[type="checkbox"].toggle{
     &__h1{
         font-weight: bold;
         padding-left: 1rem;
+    }
+    &__coeur{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        margin-right: 2rem;
     }
 }
 .menus{
