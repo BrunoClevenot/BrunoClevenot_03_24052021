@@ -382,7 +382,7 @@ input[type="checkbox"].toggle{
         font-family: "Font Awesome\ 5 Free";
         content:'\f004';
 	    font-weight:400;
-	    transition: all 600ms;
+	    transition: all $duree5;
         cursor: ns-resize;
         width:1.3em;
         height: 1.3em;
@@ -405,6 +405,7 @@ input[type="checkbox"].toggle{
         content:'\f004';
         font-weight:900;
         transform: scale(0);
+        transform-origin: 50% 85%;
         transition: all $duree5;
         cursor: ns-resize;
         padding:auto;
@@ -414,7 +415,8 @@ input[type="checkbox"].toggle{
         align-items: center;
     }
     &:checked + label::after{
-        transform: scaleY(1); 
+        transform: scaleY(1);
+        transform-origin: bottom; 
     }
     &:checked + label{
         color:$color-primary;

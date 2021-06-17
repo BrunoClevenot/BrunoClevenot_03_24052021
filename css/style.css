@@ -471,6 +471,7 @@ input[type=checkbox].toggle + label::after {
   content: "";
   font-weight: 900;
   transform: scale(0);
+  transform-origin: 50% 85%;
   transition: all 600ms;
   cursor: ns-resize;
   padding: auto;
@@ -481,6 +482,7 @@ input[type=checkbox].toggle + label::after {
 }
 input[type=checkbox].toggle:checked + label::after {
   transform: scaleY(1);
+  transform-origin: bottom;
 }
 input[type=checkbox].toggle:checked + label {
   color: #9356DC;
