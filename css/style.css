@@ -52,25 +52,55 @@
     opacity: 1;
   }
 }
-/* Général*/
-body {
-  font-family: Roboto, Shrikhand, sans;
-  font-size: 12pt;
-  width: 95vw;
-  max-width: 800px;
-  display: flex;
-  flex-direction: column;
-  margin: auto;
+input[type=checkbox].toggle {
+  display: none;
 }
-
-a {
+input[type=checkbox].toggle + label {
+  position: relative;
+  z-index: 1;
+  font-size: 1.3rem;
   color: black;
-  text-decoration: none;
-  display: block;
+  font-family: "Font Awesome 5 Free";
+  content: "";
+  font-weight: 400;
+  transition: all 600ms;
+  cursor: ns-resize;
+  width: 1.3em;
+  height: 1.3em;
+  padding: auto;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.shrikhand {
-  font-family: Shrikhand, Roboto, sans;
+input[type=checkbox].toggle + label::after {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.3rem;
+  color: #9356DC;
+  content: "";
+  font-weight: 900;
+  transform: scale(0);
+  transform-origin: 50% 85%;
+  transition: all 600ms;
+  cursor: ns-resize;
+  padding: auto;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+input[type=checkbox].toggle:checked + label::after {
+  transform: scaleY(1);
+  transform-origin: bottom;
+}
+input[type=checkbox].toggle:checked + label {
+  color: #9356DC;
 }
 
 /* Le footer*/
@@ -103,7 +133,7 @@ footer {
   padding-bottom: 2.1rem;
 }
 
-/*************** Page d'accueil***************/
+/* Le header */
 .header {
   background-color: #EAEAEA;
   display: flex;
@@ -136,6 +166,68 @@ footer {
 }
 .image-header--hidden {
   display: none;
+}
+
+.btn {
+  position: relative;
+  border: none;
+  z-index: 1;
+  width: 14rem;
+  margin: auto;
+  margin-top: 1em;
+  height: 3rem;
+  background: radial-gradient(ellipse at top left, #FF79DA, transparent), radial-gradient(ellipse at bottom right, #9356DC, transparent);
+  border-radius: 300px;
+  box-shadow: 5px 5px 5px lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn:hover .btn__light {
+  opacity: 1;
+}
+.btn__light {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background: radial-gradient(ellipse at top left, #ffc6ef, transparent), radial-gradient(ellipse at bottom right, #bc95e9, transparent);
+  height: 3rem;
+  width: 14rem;
+  border-radius: 300px;
+  box-shadow: 8px 8px 8px lightgray;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 300ms;
+}
+.btn__command {
+  color: white;
+}
+
+/* Général*/
+body {
+  font-family: Roboto, Shrikhand, sans;
+  font-size: 12pt;
+  width: 95vw;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+
+.shrikhand {
+  font-family: Shrikhand, Roboto, sans;
 }
 
 .loader {
@@ -204,47 +296,6 @@ footer {
   animation-timing-function: linear;
 }
 
-.btn {
-  position: relative;
-  border: none;
-  z-index: 1;
-  width: 14rem;
-  margin: auto;
-  margin-top: 1em;
-  height: 3rem;
-  background: radial-gradient(ellipse at top left, #FF79DA, transparent), radial-gradient(ellipse at bottom right, #9356DC, transparent);
-  border-radius: 300px;
-  box-shadow: 5px 5px 5px lightgray;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.btn:hover .btn__light {
-  opacity: 1;
-}
-.btn__light {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
-  background: radial-gradient(ellipse at top left, #ffc6ef, transparent), radial-gradient(ellipse at bottom right, #bc95e9, transparent);
-  height: 3rem;
-  width: 14rem;
-  border-radius: 300px;
-  box-shadow: 8px 8px 8px lightgray;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 300ms;
-}
-.btn__command {
-  color: white;
-}
-
 .title {
   text-align: center;
 }
@@ -282,21 +333,6 @@ footer {
   max-width: 800px;
 }
 
-.restaurants {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin-bottom: 1.5rem;
-}
-.restaurants__h2 {
-  flex-grow: 1;
-  margin: auto;
-  margin-bottom: 1em;
-  width: 100vw;
-  max-width: 800px;
-}
-
 .boite-fonction {
   width: 88vw;
   max-width: 750px;
@@ -330,6 +366,21 @@ footer {
 }
 .boite-fonction:hover .boite-fonction__icon {
   color: #9356DC;
+}
+
+.restaurants {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+.restaurants__h2 {
+  flex-grow: 1;
+  margin: auto;
+  margin-bottom: 1em;
+  width: 100vw;
+  max-width: 800px;
 }
 
 .boite-resto {
@@ -404,7 +455,6 @@ footer {
   align-items: center;
 }
 
-/*************** Les pages de menus***************/
 .main-complet__image {
   height: 70vw;
   max-height: 700px;
@@ -435,57 +485,6 @@ footer {
   background-color: #efefef;
   padding: 0;
   padding-bottom: 1em;
-}
-
-input[type=checkbox].toggle {
-  display: none;
-}
-input[type=checkbox].toggle + label {
-  position: relative;
-  z-index: 1;
-  font-size: 1.3rem;
-  color: black;
-  font-family: "Font Awesome 5 Free";
-  content: "";
-  font-weight: 400;
-  transition: all 600ms;
-  cursor: ns-resize;
-  width: 1.3em;
-  height: 1.3em;
-  padding: auto;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-input[type=checkbox].toggle + label::after {
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  font-family: "Font Awesome 5 Free";
-  font-size: 1.3rem;
-  color: #9356DC;
-  content: "";
-  font-weight: 900;
-  transform: scale(0);
-  transform-origin: 50% 85%;
-  transition: all 600ms;
-  cursor: ns-resize;
-  padding: auto;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-input[type=checkbox].toggle:checked + label::after {
-  transform: scaleY(1);
-  transform-origin: bottom;
-}
-input[type=checkbox].toggle:checked + label {
-  color: #9356DC;
 }
 
 .title-menu {

@@ -1,0 +1,42 @@
+.btn{
+    position: relative;
+    border:none;
+    z-index: 1;
+    width: 14rem;
+    margin:auto;
+    margin-top: 1em;
+	height: 3rem;
+    background: radial-gradient(ellipse at top left, $color-secondary,transparent), radial-gradient(ellipse at bottom right,$color-primary,transparent);
+    border-radius: 300px;
+    box-shadow: 5px 5px 5px lighten($color-gris,25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover{
+        & .btn__light{
+            opacity:1
+        }
+    }
+    &__light{
+        position: absolute;
+	    top:0;
+	    left:0;
+	    bottom:0;
+	    right:0;
+        z-index: -1;
+	    background:radial-gradient(ellipse at top left, lighten($color-secondary,15%),transparent), radial-gradient(ellipse at bottom right,lighten($color-primary,15%),transparent);
+	    height: 3rem;
+	    width:14rem;
+	    border-radius:300px;
+	    box-shadow: 8px 8px 8px lighten($color-gris,25);
+        margin: auto;
+	    display: flex;
+	    justify-content: center;
+	    align-items:center;
+	    opacity:0;
+        transition: opacity $duree3;
+    }
+    &__command{
+        color: white;
+    }
+}

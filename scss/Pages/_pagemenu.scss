@@ -1,0 +1,172 @@
+.main-complet{
+    &__image{
+        height:70vw;
+        max-height: 700px;
+        width: 100%;
+        &--alfa{            
+            background: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg") 0 0;  
+            background-size: cover;         
+        }
+        &--alfb{            
+            background: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg") 0 0;  
+            background-size: cover;         
+        }
+        &--alfc{            
+            background: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg") 0 0;  
+            background-size: cover;         
+        }
+        &--alfd{            
+            background: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg") 0 0;  
+            background-size: cover;         
+        }
+    }
+}
+.main-main{
+    background-color: white;
+    margin:0;
+    margin-top: -15vw;
+    border-radius: 4rem 4rem 0 0;
+    background-color: lighten($color-fond-gris,2%);
+    padding:0;
+    padding-bottom: 1em;
+}
+.title-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size:1.3rem;
+    &__h1{
+        font-weight: bold;
+        padding-left: 1rem;
+    }
+    &__coeur{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        margin-right: 2rem;
+    }
+}
+.menus{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin:0;
+    margin-bottom: 1.5em;
+    &__h2{
+        font-weight: normal;
+        margin: 0 0 2px 1em;
+    }
+    &__form{
+        background-color: $color-tertiary;
+        height:5px;
+        width: 60px;
+        margin-left: 1.5em;
+        margin-right:0;
+        margin-top:1px;
+    }
+    &__container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: white;
+        width: 86vw;
+        max-width: 768px;
+        height: 64px;
+        margin-right: auto;
+        margin-left: auto;
+        box-shadow: 5px 5px 5px lighten($color-gris,15);
+        border-radius: 1rem;
+        overflow: hidden;
+        font-size: 1rem;
+        margin-top:1.5em;
+        margin-bottom:0.4em;
+        animation: visible-menu;
+        animation-duration: $duree;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-out;
+        opacity:0;
+        &--delai1{
+            animation-delay: $delai;    
+        }
+        &--delai2{
+            animation-delay: $delai+300;   
+        }
+        &--delai3{
+            animation-delay: $delai+600;   
+        }
+        &--delai4{
+            animation-delay: $delai+900;
+        }
+        &:hover .menus__OK{
+            margin-right: 0;
+            transform: translateX(1px);
+        }
+        &:hover .menus__OK--rotate{
+            transform: rotate(360deg)
+        }
+    }
+    &__text{
+        @include mobile-only;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: 100%;
+        margin-left:0;
+        margin-right: 0;
+        flex-grow: 1;
+        &--modif{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &--title{
+            @include mobile-only;
+            font-weight: bold;
+            margin: 0.8em 0em 0.2em 0.5em;
+            width:auto;
+            max-width: 80%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        &--subtitle{
+            @include mobile-only;
+            width:auto;
+            max-width: 80%;
+            margin: 0em 0em 0.8em 0.5em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        &--price{
+            font-weight: bold;
+            margin: 0 0.2em 0.8em -9em;
+        }
+    }
+    &__OK{
+        color: white;
+        background-color: $color-tertiary;
+        text-align: center;
+        vertical-align: center;
+        width: 64px;
+        height: 64px;
+        margin:0;
+        margin-right: -4em;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+        flex-grow: 0;
+        flex-shrink: 0;
+        transform: translateX(65px);
+        transition: all $duree4;
+        transform-origin: bottom right;
+        &--rotate{
+            transition: all $duree4;
+        }
+    }
+}

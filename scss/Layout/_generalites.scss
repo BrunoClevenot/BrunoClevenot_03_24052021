@@ -1,0 +1,62 @@
+/* Le footer*/
+footer{
+    color: white;
+    background: black;
+}
+.foot{
+    display: flex;
+    flex-direction: row;
+    justify-content: space space-evenly;
+    align-items: center;
+    height: 5vh;
+    color: white;
+    &__icon{
+        padding-right: 1rem;
+    }
+    &--h2{
+        padding-left: 1rem;
+        margin:0;
+        margin-bottom: 1rem;
+    }
+    &--a{
+        padding-left: 1rem;
+    }
+    &--only{
+        padding-left: 1rem;
+        padding-bottom: 2.1rem;
+    }
+}
+/* Le header */
+.header{
+    background-color: $color-fond-gris;
+    display : flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    &__text{
+        padding-left: 1rem;
+    }
+}
+.image-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 3px 4px $color-gris;
+    margin-top:1rem;
+    margin-bottom: 3px;
+    &--logo{
+        flex-grow:1;
+        text-align: center;
+    }
+    &__marque{
+        padding-left: 1rem;
+    }
+    &--dell{
+        box-shadow: none;
+    }
+
+    &--hidden{
+        display: none;
+    }    
+}
