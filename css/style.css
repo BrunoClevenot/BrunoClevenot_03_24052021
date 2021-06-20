@@ -571,6 +571,7 @@ a {
   flex-direction: column;
   justify-content: space-between;
   max-width: 100%;
+  margin: auto;
   margin-left: 0;
   margin-right: 0;
   flex-grow: 1;
@@ -588,7 +589,7 @@ a {
 }
 .menus__text--title {
   font-weight: bold;
-  margin: 0.8em 0em 0.2em 0.5em;
+  margin: 0.5em 0em 0.5em 0.5em;
   width: auto;
   max-width: 80%;
   white-space: nowrap;
@@ -603,7 +604,7 @@ a {
 .menus__text--subtitle {
   width: auto;
   max-width: 80%;
-  margin: 0em 0em 0.8em 0.5em;
+  margin: 0em 0em 0.5em 0.5em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
