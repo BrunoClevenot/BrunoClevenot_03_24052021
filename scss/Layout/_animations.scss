@@ -1,50 +1,42 @@
-input[type="checkbox"].toggle{
+.toggle{
 	display: none;
-    & + label{
-        position: relative;
-        z-index: 1;
-        font-size: 1.3rem;  
-	    color: black ;
-        font-family: "Font Awesome\ 5 Free";
-        content:'\f004';
-	    font-weight:400;
-	    transition: all $duree5;
-        cursor: ns-resize;
-        width:1.3em;
-        height: 1.3em;
-        padding:auto;
-        margin:auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }	
-    & + label::after{
-        position: absolute;
-        z-index: -1;
-	    top:0;
-	    right:0;
-	    bottom:0;
-	    left:0;
-        font-family: "Font Awesome\ 5 Free";
-        font-size: 1.3rem;  
-        color: $color-primary;
-        content:'\f004';
-        font-weight:900;
-        transform: scale(0);
-        transform-origin: 50% 85%;
-        transition: all $duree5;
-        cursor: ns-resize;
-        padding:auto;
-        margin:auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+}
+.heart-toggle{
+    position: relative;
+    z-index: 1;
+    font-size: 1.3rem;  
+    margin: auto ;
+    font-weight:400;
+    transition: all 600ms;
+    display: flex;
+	justify-content: center;
+	align-items:center;
+    cursor:ns-resize;
+	background: transparent;
+    .toggle:checked+&{
+        color:transparent;
     }
-    &:checked + label::after{
+.over {
+    position: absolute;
+    top:0; 
+    right:0;
+    bottom:0; 
+    left:0;
+    display:flex;
+  	justify-content: center;
+	align-items:center;
+}
+.full {
+    @include gradient-text('linear-gradient(25deg, #{$color-secondary}, #{$color-primary})', 'light');
+}
+.full {
+    transition: all 600ms;
+    margin: auto ;
+    font-weight: 900;
+    transform: scale(0);
+    transform-origin: 50% 1.08rem;
+    .toggle:checked+&{
         transform: scaleY(1);
-        transform-origin: bottom; 
     }
-    &:checked + label{
-        color:$color-primary;
-    }
+}
 }

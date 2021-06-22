@@ -52,55 +52,67 @@
     opacity: 1;
   }
 }
-input[type=checkbox].toggle {
+.toggle {
   display: none;
 }
-input[type=checkbox].toggle + label {
+
+.heart-toggle {
   position: relative;
   z-index: 1;
   font-size: 1.3rem;
-  color: black;
-  font-family: "Font Awesome 5 Free";
-  content: "";
+  margin: auto;
   font-weight: 400;
   transition: all 600ms;
-  cursor: ns-resize;
-  width: 1.3em;
-  height: 1.3em;
-  padding: auto;
-  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: ns-resize;
+  background: transparent;
 }
-input[type=checkbox].toggle + label::after {
+.toggle:checked + .heart-toggle {
+  color: transparent;
+}
+.heart-toggle .over {
   position: absolute;
-  z-index: -1;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  font-family: "Font Awesome 5 Free";
-  font-size: 1.3rem;
-  color: #9356DC;
-  content: "";
-  font-weight: 900;
-  transform: scale(0);
-  transform-origin: 50% 85%;
-  transition: all 600ms;
-  cursor: ns-resize;
-  padding: auto;
-  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-input[type=checkbox].toggle:checked + label::after {
-  transform: scaleY(1);
-  transform-origin: bottom;
+@supports (mix-blend-mode: lighten) {
+  .heart-toggle .full {
+    position: relative;
+    color: #000;
+    background: #fff;
+    mix-blend-mode: multiply;
+  }
+  .heart-toggle .full::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(25deg, #FF79DA, #9356DC);
+    pointer-events: none;
+  }
+  .heart-toggle .full::after {
+    mix-blend-mode: screen;
+  }
 }
-input[type=checkbox].toggle:checked + label {
-  color: #9356DC;
+.heart-toggle .full {
+  transition: all 600ms;
+  margin: auto;
+  font-weight: 900;
+  transform: scale(0);
+  transform-origin: 50% 1.08rem;
+}
+.toggle:checked + .heart-toggle .full {
+  transform: scaleY(1);
 }
 
 /* Le footer*/
@@ -536,7 +548,7 @@ a {
   margin-right: auto;
   margin-left: auto;
   box-shadow: 5px 5px 5px #b9b9b9;
-  border-radius: 1rem;
+  border-radius: 0.7rem;
   overflow: hidden;
   font-size: 1rem;
   margin-top: 1.5em;
@@ -589,7 +601,7 @@ a {
 }
 .menus__text--title {
   font-weight: bold;
-  margin: 0.5em 0em 0.5em 0.5em;
+  margin: 0.8em 0em 0.2em 0.5em;
   width: auto;
   max-width: 80%;
   white-space: nowrap;
@@ -604,7 +616,7 @@ a {
 .menus__text--subtitle {
   width: auto;
   max-width: 80%;
-  margin: 0em 0em 0.5em 0.5em;
+  margin: 0em 0em 0.8em 0.5em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
