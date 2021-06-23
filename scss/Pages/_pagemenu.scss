@@ -25,7 +25,7 @@
     background-color: white;
     margin:0;
     margin-top: -15vw;
-    border-radius: 4rem 4rem 0 0;
+    border-radius: 3rem 3rem 0 0;
     background-color: lighten($color-fond-gris,2%);
     padding:0;
     padding-bottom: 1em;
@@ -38,14 +38,14 @@
     font-size:1.3rem;
     &__h1{
         font-weight: bold;
-        padding-left: 1rem;
+        padding-left: 1.5rem;
     }
     &__coeur{
         display: flex;
         justify-content: center;
         align-items: center;
         margin: auto;
-        margin-right: 2rem;
+        margin-right: 1.5rem;
     }
 }
 .menus{
