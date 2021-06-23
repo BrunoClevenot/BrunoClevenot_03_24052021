@@ -342,6 +342,7 @@ a {
   margin: auto;
   width: 100%;
   margin-bottom: 1em;
+  margin-left: 1em;
   max-width: 800px;
 }
 
@@ -391,6 +392,7 @@ a {
   flex-grow: 1;
   margin: auto;
   margin-bottom: 1em;
+  margin-left: 1em;
   width: 100vw;
   max-width: 800px;
 }
