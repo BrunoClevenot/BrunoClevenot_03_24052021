@@ -40,3 +40,15 @@
     }
 }
 }
+.icon-move{
+    display:none;
+}
+.icon-move:checked ~ .box__OK{
+    width: 64px;
+}
+.icon-move:checked ~ .box__OK .box__OK--move{
+    transform:rotate(720deg);
+}
+.icon-move:checked ~ .box__info .box__info--subtitle .price{
+    margin-right: -35%;
+}

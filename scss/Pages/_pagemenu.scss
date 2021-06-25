@@ -68,94 +68,87 @@
     }
     &__container{
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        background-color: white;
-        width: 86vw;
-        max-width: 768px;
-        height: 64px;
-        margin-right: auto;
-        margin-left: auto;
-        box-shadow: 5px 5px 5px lighten($color-gris,15);
-        border-radius: 0.7rem;
-        overflow: hidden;
-        font-size: 1rem;
-        margin-top:1.5em;
-        margin-bottom:0.4em;
-        animation: visible-menu;
-        animation-duration: $duree;
-        animation-fill-mode: forwards;
-        animation-timing-function: ease-out;
-        opacity:0;
-        &--delai1{
-            animation-delay: $delai;    
-        }
-        &--delai2{
-            animation-delay: $delai+300;   
-        }
-        &--delai3{
-            animation-delay: $delai+600;   
-        }
-        &--delai4{
-            animation-delay: $delai+900;
-        }
-        &:hover .menus__OK{
-            margin-right: 0;
-            transform: translateX(1px);
-        }
-        &:hover .menus__OK--rotate{
-            transform: rotate(360deg)
-        }
-    }
-    &__text{
-        @include mobile-only;
-        display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        max-width: 100%;
-        margin: auto;
-        margin-left:0;
-        margin-right: 0;
-        flex-grow: 1;
-        &--modif{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-        }
+        justify-content: center;
+        align-items: center;
+    }
+}
+.box{
+    @include mobile-only;
+    display:flex;
+    flex-direction: row;
+    background-color: white;
+    width: 86vw;
+    max-width: 768px;
+    height: 64px;
+    margin-right: auto;
+    margin-left: 1em;
+    box-shadow: 5px 5px 5px lighten($color-gris,15);
+    border-radius: 0.7rem;
+    overflow: hidden;
+    font-size: 1rem;
+    margin-top:1.5em;
+    margin-bottom:0.4em;
+    animation: visible-menu;
+    animation-duration: $duree;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    opacity:0;
+    cursor: pointer;
+    &--delai1{
+        animation-delay: $delai;    
+    }
+    &--delai2{
+        animation-delay: $delai+300;   
+    }
+    &--delai3{
+        animation-delay: $delai+600;   
+    }
+    &--delai4{
+        animation-delay: $delai+900;
+    }
+    &__info{
+        display:flex;
+        flex-direction: column;
+        margin:auto;
+        margin-left:0.5em;
+        width:74.42%;
+        height:100%;    
         &--title{
-            @include mobile-only;
+            display:flex;
+            flex-direction: row;
+            align-items: center;
+            height:auto;
             font-weight: bold;
-            margin: 0.8em 0em 0.2em 0.5em;
-            width:auto;
-            max-width: 80%;
+            margin: auto;
+            margin-left: 0.5em;
+            margin-right:-0.5em;
+            margin-top: 0.8em;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
         }
         &--subtitle{
-            @include mobile-only;
-            width:auto;
-            max-width: 80%;
-            margin: 0em 0em 0.8em 0.5em;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        &--price{
-            font-weight: bold;
-            margin: 0 0.2em 0.8em -9em;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: auto;
+            margin: auto;
+            margin-left: 0.5em;
+            margin-right: 0;
+            margin-bottom: 0.8em;
+            width: 70%;
         }
     }
     &__OK{
+        display:flex;
         color: white;
         background-color: $color-tertiary;
         text-align: center;
         vertical-align: center;
-        width: 64px;
+        width: 0px;
         height: 64px;
         margin:0;
-        margin-right: -4em;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -163,11 +156,22 @@
         background-size: cover;
         flex-grow: 0;
         flex-shrink: 0;
-        transform: translateX(65px);
         transition: all $duree4;
-        transform-origin: bottom right;
-        &--rotate{
+        &--move{
             transition: all $duree4;
-        }
+        }        
     }
+}
+.subtitle{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin:auto;
+    flex-grow: 1;
+}
+.price{
+    font-weight: bold;
+    margin: auto;
+    margin-right:-80%;
+    transition: all $duree4;
 }
