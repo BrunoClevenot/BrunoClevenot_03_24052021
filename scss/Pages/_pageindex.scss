@@ -15,7 +15,6 @@
     transform: scale(0); 
     &__external{
         margin:auto;
-        padding: auto;
         width:90vw;
         max-width: 720px;
         height: 90vw;
@@ -30,7 +29,6 @@
         animation-duration: $duree;
     }
     &__internal{
-        padding: auto;
         margin: auto;
         width: 70vw;
         max-width: 560px;
@@ -47,7 +45,6 @@
     }
     &__icon{
         margin: auto;
-        padding: auto;
         font-size: 20vh;
         color: $color-tertiary;
         animation-name: anim-ico;
@@ -163,7 +160,7 @@
     overflow: hidden;
     &__image{
         object-fit: cover;
-        display: box;
+        display: block;
         height:70vw;
         max-height: 180px;
         width:100%;
@@ -210,7 +207,6 @@
         width: auto;
         height: auto;
         margin:auto;
-        padding: auto;
         display: flex;
         justify-content: center;
         align-items: center;

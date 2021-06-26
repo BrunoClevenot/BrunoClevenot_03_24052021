@@ -140,7 +140,7 @@ footer {
 .foot {
   display: flex;
   flex-direction: row;
-  justify-content: space space-evenly;
+  justify-content: flex-start;
   align-items: center;
   height: 5vh;
   color: white;
@@ -275,7 +275,6 @@ a {
 }
 .loader__external {
   margin: auto;
-  padding: auto;
   width: 90vw;
   max-width: 720px;
   height: 90vw;
@@ -290,7 +289,6 @@ a {
   animation-duration: 3000ms;
 }
 .loader__internal {
-  padding: auto;
   margin: auto;
   width: 70vw;
   max-width: 560px;
@@ -307,7 +305,6 @@ a {
 }
 .loader__icon {
   margin: auto;
-  padding: auto;
   font-size: 20vh;
   color: #99E2D0;
   animation-name: anim-ico;
@@ -432,7 +429,7 @@ a {
 }
 .boite-resto__image {
   object-fit: cover;
-  display: box;
+  display: block;
   height: 70vw;
   max-height: 180px;
   width: 100%;
@@ -479,7 +476,6 @@ a {
   width: auto;
   height: auto;
   margin: auto;
-  padding: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -622,6 +618,7 @@ a {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  flex-grow: 1;
 }
 .box__info--subtitle {
   display: flex;
