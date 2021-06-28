@@ -49,6 +49,6 @@
 .icon-move:checked ~ .box__OK .box__OK--move{
     transform:rotate(720deg);
 }
-.icon-move:checked ~ .box__info .box__info--subtitle .price{
-    margin-right: -35%;
+.icon-move:checked ~ .box__info{
+    @include largeur($larg);
 }

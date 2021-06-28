@@ -127,8 +127,8 @@
   transform: rotate(720deg);
 }
 
-.icon-move:checked ~ .box__info .box__info--subtitle .price {
-  margin-right: -35%;
+.icon-move:checked ~ .box__info {
+  width: 100%;
 }
 
 /* Le footer*/
@@ -566,7 +566,7 @@ a {
   max-width: 768px;
   height: 64px;
   margin-right: auto;
-  margin-left: 1em;
+  margin-left: auto;
   box-shadow: 5px 5px 5px #b9b9b9;
   border-radius: 0.7rem;
   overflow: hidden;
@@ -601,35 +601,33 @@ a {
   display: flex;
   flex-direction: column;
   margin: auto;
-  margin-left: 0.5em;
-  width: 74.42%;
+  margin-right: 2px;
+  margin-left: 0.1em;
   height: 100%;
+  width: 100%;
+  transition: all 900ms;
 }
 .box__info--title {
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: auto;
+  height: 32px;
+  flex-grow: 1;
   font-weight: bold;
   margin: auto;
   margin-left: 0.5em;
-  margin-right: -0.5em;
-  margin-top: 0.8em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  flex-grow: 1;
 }
 .box__info--subtitle {
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: auto;
+  height: 32px;
   margin: auto;
   margin-left: 0.5em;
-  margin-right: 0;
-  margin-bottom: 0.8em;
-  width: 70%;
+  margin-right: 0.1em;
 }
 .box__OK {
   display: flex;
@@ -654,18 +652,15 @@ a {
 }
 
 .subtitle {
+  flex-grow: 1;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin: auto;
-  flex-grow: 1;
 }
 
 .price {
   font-weight: bold;
   margin: auto;
-  margin-right: -80%;
-  transition: all 900ms;
 }
 
 /*# sourceMappingURL=style.css.map */

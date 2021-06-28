@@ -8,6 +8,22 @@
         display:none
     }
 }
+@function taille($larg){
+    @if screen and (max-width:larg){
+        $return: 1;
+    }
+    @else{
+        $return: 0;
+    }
+}
+@mixin largeur($size: taille(320px)) {
+    @if ($size == 1){
+        width:76%;
+    }
+    @else{
+        width: 100%;
+    }
+}
 @mixin gradient-text($gradient, $bg : 'light') {
     @supports(mix-blend-mode: lighten) {
         position: relative;
