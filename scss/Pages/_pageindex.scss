@@ -66,14 +66,6 @@
         font-weight: bold;
         font-size: 1.7rem;
     }
-    &__btn{
-        color: white;
-        height:4rem;
-        width: 14rem;
-        display:flex;
-        justify-content: center;
-        align-items: center;
-    }
 }
 .display-br{
     @include no-mobile;

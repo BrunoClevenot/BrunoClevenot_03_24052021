@@ -8,11 +8,6 @@
         display:none
     }
 }
-@mixin larg{
-    @media screen and (max-width: 320px){
-        width:76%;
-    }
-}
 @mixin gradient-text($gradient, $bg : 'light') {
     @supports(mix-blend-mode: lighten) {
         position: relative;
