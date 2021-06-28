@@ -13,6 +13,9 @@
 	align-items:center;
     cursor:ns-resize;
 	background: transparent;
+    &.bg-menu{
+        background-color: lighten($color-fond-gris, 2%);
+    }
     .toggle:checked+&{
         color:transparent;
     }

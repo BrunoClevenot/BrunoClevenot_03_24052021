@@ -69,6 +69,9 @@
   cursor: ns-resize;
   background: transparent;
 }
+.heart-toggle.bg-menu {
+  background-color: #efefef;
+}
 .toggle:checked + .heart-toggle {
   color: transparent;
 }
@@ -587,16 +590,16 @@ a {
     font-size: 0.8rem;
   }
 }
-.box--delai1 {
+.box--detail1 {
   animation-delay: 1000ms;
 }
-.box--delai2 {
+.box--detail2 {
   animation-delay: 1300ms;
 }
-.box--delai3 {
+.box--detail3 {
   animation-delay: 1600ms;
 }
-.box--delai4 {
+.box--detail4 {
   animation-delay: 1900ms;
 }
 .box__info {
@@ -606,7 +609,8 @@ a {
   margin-right: 2px;
   margin-left: 0.1em;
   height: 100%;
-  width: 100%;
+  width: 1%;
+  flex-grow: 1;
   transition: all 900ms;
 }
 .box__info--title {

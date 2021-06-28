@@ -95,16 +95,16 @@
     animation-timing-function: ease-out;
     opacity:0;
     cursor: pointer;
-    &--delai1{
+    &--detail1{
         animation-delay: $delai;    
     }
-    &--delai2{
+    &--detail2{
         animation-delay: $delai+300;   
     }
-    &--delai3{
+    &--detail3{
         animation-delay: $delai+600;   
     }
-    &--delai4{
+    &--detail4{
         animation-delay: $delai+900;
     }
     &__info{
@@ -114,7 +114,8 @@
         margin-right: 2px;
         margin-left: 0.1em;
         height:100%;
-        width: 100%;
+        width: 1%;
+        flex-grow:1;
         transition: all $duree4;    
         &--title{
             display:flex;
