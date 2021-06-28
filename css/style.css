@@ -127,8 +127,10 @@
   transform: rotate(720deg);
 }
 
-.icon-move:checked ~ .box__info {
-  width: 100%;
+@media screen and (max-width: 320px) {
+  .icon-move:checked ~ .box__info {
+    width: 76%;
+  }
 }
 
 /* Le footer*/
