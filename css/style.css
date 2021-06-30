@@ -396,6 +396,9 @@ a {
   border-radius: 1rem;
   overflow: hidden;
 }
+.boite-resto__lien {
+  width: 100%;
+}
 .boite-resto__image {
   object-fit: cover;
   display: block;
@@ -405,10 +408,11 @@ a {
   margin: 0;
   margin-top: -50px;
   position: relative;
+  overflow: hidden;
 }
 .boite-resto__newtext {
   position: absolute;
-  top: 0;
+  top: 15px;
   right: 15px;
   color: #008768;
   background: #99E2D0;

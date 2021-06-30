@@ -150,6 +150,9 @@
     box-shadow: 5px 5px 5px lighten($color-gris,15);
     border-radius: 1rem;
     overflow: hidden;
+    &__lien{
+        width:100%;
+    }
     &__image{
         object-fit: cover;
         display: block;
@@ -159,10 +162,11 @@
         margin:0;
         margin-top:-50px;
         position:relative;
+        overflow: hidden;
     }
     &__newtext{
         position: absolute;
-        top:0;
+        top:15px;
         right:15px;
         color: $color-green;
         background: $color-tertiary;
