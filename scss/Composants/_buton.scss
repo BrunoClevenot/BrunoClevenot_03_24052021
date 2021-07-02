@@ -11,6 +11,7 @@
     justify-content: center;
     align-items: center;
     transition : all $duree3;
+    border:none;
     &:hover{
         background:radial-gradient(ellipse at top left, lighten($color-secondary,5%),transparent), radial-gradient(ellipse at bottom right,lighten($color-primary,5%),transparent);
         box-shadow: 8px 8px 8px lighten($color-gris,25);

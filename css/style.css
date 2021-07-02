@@ -208,6 +208,7 @@ footer {
   justify-content: center;
   align-items: center;
   transition: all 300ms;
+  border: none;
 }
 .btn:hover {
   background: radial-gradient(ellipse at top left, #ff93e1, transparent), radial-gradient(ellipse at bottom right, #a16be0, transparent);
