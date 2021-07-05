@@ -56,13 +56,14 @@
     margin-bottom: 1.5em;
     &__h2{
         font-weight: normal;
+        font-size:1rem;
         margin: 0 0 2px 1em;
     }
     &__form{
         background-color: $color-tertiary;
         height:5px;
-        width: 60px;
-        margin-left: 1.5em;
+        width: 40px;
+        margin-left: 1em;
         margin-right:0;
         margin-top:1px;
     }
