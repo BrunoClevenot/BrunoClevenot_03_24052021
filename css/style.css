@@ -587,11 +587,12 @@ a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 32px;
   flex-grow: 1;
+  height: 32px;
   font-weight: bold;
   margin: auto;
   margin-left: 0.5em;
+  margin-right: 0.1em;
 }
 .box__info--subtitle {
   display: flex;
@@ -625,7 +626,8 @@ a {
 }
 
 .title {
-  flex-grow: 1;
+  width: auto;
+  padding-right: 1px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
