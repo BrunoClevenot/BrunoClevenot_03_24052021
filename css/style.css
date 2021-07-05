@@ -133,7 +133,7 @@
 /* Le footer*/
 footer {
   color: white;
-  background: black;
+  background: #353535;
 }
 
 .foot {
@@ -592,9 +592,6 @@ a {
   font-weight: bold;
   margin: auto;
   margin-left: 0.5em;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .box__info--subtitle {
   display: flex;
@@ -625,6 +622,13 @@ a {
 }
 .box__OK--move {
   transition: all 900ms;
+}
+
+.title {
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .subtitle {

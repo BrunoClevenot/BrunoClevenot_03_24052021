@@ -127,9 +127,7 @@
             font-weight: bold;
             margin: auto;
             margin-left: 0.5em;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            
         }
         &--subtitle{
             display: flex;
@@ -162,6 +160,12 @@
             transition: all $duree4;
         }        
     }
+}
+.title{
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .subtitle{
     flex-grow:1;
