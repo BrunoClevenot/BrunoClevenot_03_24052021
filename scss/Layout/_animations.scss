@@ -11,7 +11,7 @@
     display: flex;
 	justify-content: center;
 	align-items:center;
-    cursor:ns-resize;
+    cursor:pointer;
 	background: transparent;
     &.bg-menu{
         background-color: lighten($color-fond-gris, 2%);
